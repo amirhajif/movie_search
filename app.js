@@ -66,10 +66,10 @@ function displayMovieList(movies){
         // add completed division into parent element for show on search 
         searchList.appendChild(movieListItem)
 
-        //load movie after searching and press enter
-        loadMovieDetails()
     });
-
+    //load movie after searching and press enter
+    loadMovieDetails()
+}
     function loadMovieDetails(){
         const searchListMovies = searchList.querySelectorAll('.search-list-item')
         searchListMovies.forEach(movie => {
@@ -81,8 +81,11 @@ function displayMovieList(movies){
                 // console.log(result)
                 const movieDetail = await result.json()
                 console.log(movieDetail)
+                displayeMovieDetails(movieDetail)
             })
 
         });
     }
-}
+    function displayeMovieDetails(movieDetail){
+         
+    }
