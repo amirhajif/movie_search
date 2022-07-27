@@ -112,3 +112,9 @@ function displayMovieList(movies){
             </div>
          `
     }
+    //when click outside of search box hide search result 
+    window.addEventListener('click', (event) => {
+        if(event.target.className != "form-control"){
+            searchList.classList.add('hide-search-list');
+        }
+    });
